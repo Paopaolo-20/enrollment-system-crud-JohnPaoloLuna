@@ -1,0 +1,92 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1100px;
+  margin: 20px auto;
+  background: #f7f9fc;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Form styling */
+form {
+  margin-bottom: 16px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #007BFF;
+  color: white;
+}
+
+/* Buttons */
+button {
+  margin-top: 10px;
+  margin-right: 6px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button.add {
+  background: #28a745;
+  color: white;
+}
+
+button.add:hover {
+  background: #218838;
+}
+
+button.edit {
+  background: #ffc107;
+  color: #333;
+}
+
+button.edit:hover {
+  background: #e0a800;
+}
+
+button.delete {
+  background: #dc3545;
+  color: white;
+}
+
+button.delete:hover {
+  background: #c82333;
+}

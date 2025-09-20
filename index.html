@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student & Program Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Student Management</h1>
+
+  <!-- Student Form -->
+  <form id="studentForm">
+    <input type="hidden" id="stud_id" name="stud_id" />
+
+    <label>Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label>Program</label>
+    <select id="program_id" name="program_id" required>
+      <option value="">-- Select Program --</option>
+    </select>
+
+    <label>Allowance</label>
+    <input type="number" step="10" id="allowance" name="allowance" />
+
+    <div style="margin-top:8px;">
+      <button type="submit" id="saveStudentBtn">Save Student</button>
+      <button type="button" id="clearStudentBtn">Clear</button>
+      <button type="button" id="showStudentsBtn">Show Students</button>
+    </div>
+  </form>
+
+  <h2>Student List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Program</th><th>Allowance</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="studentTableBody"></tbody>
+  </table>
+
+  <hr/>
+
+  <h1>Program Management</h1>
+
+  <form id="programForm">
+    <!-- Hidden field -->
+    <input type="hidden" id="program_id" name="program_id" />
+    <label>Program Name</label>
+    <input type="text" id="program_name" name="program_name" required />
+    <div style="margin-top:8px;">
+      <button type="submit" id="saveProgramBtn">Save Program</button>
+      <button type="button" id="clearProgramBtn">Clear</button>
+    </div>
+  </form>
+
+  <h2>Program List</h2>
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Program Name</th><th>Actions</th></tr>
+    </thead>
+    <tbody id="programTableBody"></tbody>
+  </table>
+
+  <hr/>
+
+  <h1>Year Management</h1>
+
+  <form id="yearForm">
+    <input type="hidden" id="year_id" name="year_id" />
+
+    <label>Year From</label>
+    <input type="number" id="year_from" name="year_from" required />
+
+    <label>Year To</label>
+    <input type="number" id="year_to" name="year_to" required />
+
+    <div style="margin-top:8px;">
+      <button type="submit">Save Year</button>
+      <button type="button" onclick="document.getElementById('yearForm').reset(); document.getElementById('year_id').value='';">Clear</button>
+    </div>
+  </form>
+
+  <h2>Year List</h2>
+  <table>
+    <thead>
+      <tr><th>ID</th><th>From</th><th>To</th><th>Actions</th></tr>
+    </thead>
+    <tbody id="yearTableBody"></tbody>
+  </table>
+  <hr/>
+
+<section id="subjectSection">
+  <h1>Subject Management</h1>
+
+  <form id="subjectForm">
+    <input type="hidden" id="subject_id" name="subject_id" value="">
+    <label for="subject_name">Subject Name</label>
+    <input id="subject_name" name="subject_name" required>
+    
+    <label for="sem_id">Semester</label>
+    <select id="sem_id" name="sem_id" required>
+      <option value="">-- Select Semester --</option>
+    </select>
+
+    <div style="margin-top:10px;">
+      <button type="submit" id="saveSubjectBtn">Save Subject</button>
+      <button type="button" id="clearSubjectBtn">Clear</button>
+    </div>
+  </form>
+
+  <h2>Subject List</h2>
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Subject</th><th>Semester</th><th>Actions</th></tr>
+    </thead>
+    <tbody id="subjectTableBody"></tbody>
+  </table>
+  <hr/>
+
+<h1>Enrollment Management</h1>
+
+<form id="enrollmentForm">
+  <input type="hidden" id="enrollment_id" name="enrollment_id" />
+
+  <label for="enroll_student">Select Student</label>
+  <select id="enroll_student" name="student_id" required>
+    <option value="">-- Select Student --</option>
+  </select>
+
+  <label for="enroll_subject">Select Subject</label>
+  <select id="enroll_subject" name="subject_id" required>
+    <option value="">-- Select Subject --</option>
+  </select>
+
+  <div style="margin-top:8px;">
+    <button type="submit">Enroll</button>
+    <button type="button" id="clearEnrollmentBtn">Clear</button>
+  </div>
+</form>
+
+<h2>Enrollment List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th><th>Student</th><th>Subject</th><th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="enrollmentTableBody"></tbody>
+</table>
+
+  
+
+
+  <!-- External JS -->
+  <script src="js.js"></script>
+</body>
+</html>
